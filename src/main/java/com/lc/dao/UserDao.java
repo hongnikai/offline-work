@@ -22,4 +22,6 @@ public interface UserDao {
 
     User findUserByUserId(@Param("id") String id);
 
+    List<User> pager(@Param("pageNo") int pageNo, @Param("pageSize")int pageSize);
+
 }

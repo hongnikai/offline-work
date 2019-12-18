@@ -1,7 +1,5 @@
 server:
   port: 8082
-#    servlet:
-#      context-path: /lc     #项目名： liuce
 
 spring:
   datasource:

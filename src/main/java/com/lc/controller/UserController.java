@@ -1,11 +1,14 @@
 package com.lc.controller;
 
 import com.lc.service.UserService;
+import com.lc.util.MysqlPager;
 import com.lc.util.SizeofUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,6 +37,24 @@ public class UserController {
         }
 
 
+    /**
+     * 返回新闻选项卡
+     * @param model
+     * @return
+     */
+    @RequestMapping("/news")
+    public String news(Model model, HttpServletRequest req){
+
+
+
+
+        MysqlPager mysqlPager = new MysqlPager();
+
+
+
+
+    return "";
+    }
 
 
 

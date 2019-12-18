@@ -1,6 +1,7 @@
 package com.lc.service;
 
 import com.lc.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -16,5 +17,6 @@ public interface UserService {
     User findUserByAccountAndPassword(String username, String password);
 
     User findUserByUserId(String id);
+
 
 }

@@ -39,4 +39,12 @@
             where user.id = #{id}
         </select>
 
+    <select id="pager" resultType="com.lc.entity.User">
+        select * from user limit (#{pageNo}-1)*#{pageSize},#{pageSize}
+    </select>
+
+
+
+
+
 </mapper>

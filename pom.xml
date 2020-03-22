@@ -59,6 +59,23 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+        <!-- 2019/12/18 aop添加切面类注解-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
     </dependencies>
 
     <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->

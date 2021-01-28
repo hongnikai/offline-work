@@ -44,15 +44,7 @@ public class UserController {
      */
     @RequestMapping("/news")
     public String news(Model model, HttpServletRequest req){
-
-
-
-
         MysqlPager mysqlPager = new MysqlPager();
-
-
-
-
     return "";
     }
 

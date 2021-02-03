@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * @author lc 2020-12-01 14:58
@@ -45,8 +47,27 @@ public class InputStream {
 
     }
 
-
-
+    @Test
+    public void testFileinp() throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        FileInputStream inputStream=new FileInputStream("/Users/lc/IdeaProjects/offline-work/src/main/java/com/lc/learn/java/set/Set.md");
+        FileOutputStream outputStream=new FileOutputStream("/Users/lc/IdeaProjects/offline-work/src/main/java/com/lc/learn/java/hashmap/HashMap.md");
+        FileOutputStream outputStreams=new FileOutputStream("/Users/lc/IdeaProjects/offline-work/src/main/java/com/lc/learn/io/byteStream/FileInputStream.md");
+        int len;
+        byte [] by=new byte[8192];
+        while ((len=inputStream.read(by))!=-1){
+            outputStream.write(by,0,len);
+        }
+        if(inputStream.read()==-1){
+            Class in=inputStream.getClass();
+            Method openo= in.getDeclaredMethod("open0", String.class);
+            openo.setAccessible(true);
+            openo.invoke(inputStream,"/Users/lc/IdeaProjects/offline-work/src/main/java/com/lc/learn/java/set/Set.md");
+        }
+        while ((len=inputStream.read(by))!=-1){
+            outputStreams.write(by,0,len);
+        }
+        outputStream.close();
+    }
 
 
 }

@@ -1,0 +1,28 @@
+@startuml
+
+actor  actor  /'人物'/
+
+boundary boundary
+
+control control
+
+entity  entity
+
+database database
+
+collections collections
+
+participant participant
+
+actor yiaz as "ss"
+
+yiaz -> A : 我是用重命名 yiaz 再跟你说话
+
+
+
+
+
+
+
+
+@enduml

@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     name: pis
-    url: jdbc:mysql://114.116.154.251:3306/pis?autoReconnect=true&failOverReadOnly=false&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://114.116.154.251:3306/riskm?autoReconnect=true&failOverReadOnly=false&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     #         使用druid数据源
@@ -16,5 +16,13 @@ spring:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-
-
+swagger:
+  enabled: true
+  title: offline-work api 文档
+  description: offline-work api 文档
+  version: 0.0.1
+  base-package: com.lc.controller
+  base-path: /**
+  exclude-path: /error
+  ui-config:
+    json-editor: true

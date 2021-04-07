@@ -2,6 +2,9 @@ package com.lc.util;
 
 import com.google.common.collect.Lists;
 import com.lc.bo.domain.DataAssetCategoryResponse;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.poi.ss.formula.functions.T;
+import org.springframework.beans.BeanUtils;
 
 import java.util.List;
 
@@ -30,6 +33,27 @@ public class TreeUtil {
             }
         }
         return nodeList;
+    }
+
+    /**
+     * tbl和Res类转化
+     * @param data
+     * @return
+     */
+    private List<DataAssetCategoryResponse> converTblToResponeList(List<T> data){
+        List<DataAssetCategoryResponse> resData = Lists.newArrayList();
+        if(CollectionUtils.isNotEmpty(data)){
+            data.forEach(d->{
+                DataAssetCategoryResponse resDto = DataAssetCategoryResponse.builder().build();
+                /**
+                 * 类转换
+                 */
+                BeanUtils.copyProperties(d,resDto);
+                resData.add(resDto);
+            });
+        }
+
+        return resData;
     }
 
 

@@ -1,5 +1,6 @@
 package com.lc.bo.domain;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * @author lc 4/7/21 8:46 AM
  */
+@Builder
 @Data
 public class DataAssetCategoryResponse {
 

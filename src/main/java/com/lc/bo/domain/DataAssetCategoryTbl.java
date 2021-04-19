@@ -1,17 +1,14 @@
 package com.lc.bo.domain;
 
-import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
-import java.util.List;
 
 /**
- * @author lc 4/7/21 8:46 AM
+ * @author lc 4/7/21 10:15 AM
  */
-@Builder
 @Data
-public class DataAssetCategoryResponse {
+public class DataAssetCategoryTbl {
 
     /**
      * 主键
@@ -58,8 +55,7 @@ public class DataAssetCategoryResponse {
      */
     private Integer fatherId;
 
-    /**
-     * 树节点
-     */
-    private List<DataAssetCategoryResponse> children;
+
+
+
 }

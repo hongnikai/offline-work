@@ -6,7 +6,10 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.BeanUtils;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * 构建树结构
@@ -34,6 +37,40 @@ public class TreeUtil {
         }
         return nodeList;
     }
+
+    /**
+     * 如果传入的集合存在根结点（实际意义上的根结点fatherId为空）则不需要传入parentId，
+     * 但如果传入集合 没有真正意义上的根结点 则需要指定顶部数据的parentId
+     * @param list
+     * @param parentId  根结点的父id
+     * @return
+     */
+    private List<DataAssetCategoryResponse> convertDataAssetCatrgoryTree(List<DataAssetCategoryResponse> list,String parentId){
+        //拼装结果
+        List<DataAssetCategoryResponse> treeList = Lists.newArrayList();
+        //用来储存节点的子元素map
+        Map<Integer,DataAssetCategoryResponse> childMap = new LinkedHashMap<>();
+        for (DataAssetCategoryResponse data:list){
+            childMap.put(data.getId(),data);
+        }
+        for (Integer id:childMap.keySet()){
+            DataAssetCategoryResponse data = childMap.get(id);
+            Integer fatherId = data.getFatherId();
+            if(Objects.isNull(fatherId)||fatherId.equals(parentId)){
+                //指定根结点
+                treeList.add(data);
+            }else {
+                DataAssetCategoryResponse parentData = childMap.get(fatherId);
+                if(CollectionUtils.isEmpty(parentData.getChildren())){
+                    parentData.setChildren(Lists.newArrayList());
+                }
+                parentData.getChildren().add(data);
+            }
+        }
+        return treeList;
+    }
+
+
 
     /**
      * tbl和Res类转化

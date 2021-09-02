@@ -22,7 +22,7 @@ public class LogAspect {
         System.out.println("doAfter");
     }
 
-    @AfterReturning("LogAspect()")
+    @AfterReturning(pointcut = "LogAspect()")
     public void doAfterReturning(JoinPoint joinPoint){
         System.out.println("doAfterReturning");
     }

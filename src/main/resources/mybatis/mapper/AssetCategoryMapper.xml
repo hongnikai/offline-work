@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lc.mapper.AssetCategoryMapper">
+
+
+    <resultMap id="bak" type="com.lc.bo.domain.DataAssetCategoryTbl">
+        <result column="id" property="id" javaType="Integer"/>
+        <result column="category_code" property="categoryCode" javaType="String"/>
+        <result column="category_name" property="categoryName" javaType="String"/>
+        <result column="category_level" property="categoryLevel" javaType="Integer"/>
+        <result column="bear_person" property="bearPerson" javaType="String"/>
+        <result column="gmt_modified_oper" property="gmtModifiedOper" javaType="String"/>
+        <result column="gmt_created" property="gmtCreated" javaType="Date"/>
+        <result column="gmt_modified" property="gmtModified" javaType="Date"/>
+        <result column="father_id" property="fatherId" javaType="Integer"/>
+    </resultMap>
+
+    <sql id="tableKey">
+        id,category_code,category_name,category_level,bear_person,gmt_modified_oper,
+        gmt_created,gmt_modified,father_id
+    </sql>
+
+    <select id="getCategoryByConditionReturnOne" resultMap="bak" parameterType="string">
+        select <include refid="tableKey"/>
+        from data_asset_category
+        <where>
+            category_level in (0,1,2)
+            <if test="categoryName != null and categoryName != '' ">
+                <bind name="bindName" value=" '%'+categoryName+'%' "/>
+                and category_name like #{bindName}
+            </if>
+            <if test="bearPerson != null and bearPerson != '' ">
+                and bear_person like concat('%',#{tbl.categoryName},'%')
+            </if>
+        </where>
+    </select>
+
+    <sql id="dataAssetCateKey">
+        <trim suffixOverrides=",">
+            <if test=" tbl.id != null ">id,</if>
+            <if test=" tbl.categoryCode != null ">category_code,</if>
+            <if test=" tbl.categoryName != null ">category_name,</if>
+            <if test=" tbl.categoryLevel != null ">category_level,</if>
+            <if test=" tbl.bearPerson != null ">bear_person,</if>
+            <if test=" tbl.gmtModifiedOper != null ">gmt_modified_oper,</if>
+            gmt_created,
+            <if test=" tbl.gmtModified != null ">gmt_modified,</if>
+            <if test=" tbl.fatherId != null ">father_id,</if>
+        </trim>
+    </sql>
+
+    <sql id="dataAssetCateValue">
+        <trim suffixOverrides=",">
+            <if test=" tbl.id != null ">#{tbl.id},</if>
+            <if test=" tbl.categoryCode != null ">#{tbl.categoryCode},</if>
+            <if test=" tbl.categoryName != null ">#{tbl.categoryName},</if>
+            <if test=" tbl.categoryLevel != null ">#{tbl.categoryLevel},</if>
+            <if test=" tbl.bearPerson != null ">#{tbl.bearPerson},</if>
+            <if test=" tbl.gmtModifiedOper != null ">#{tbl.gmtModifiedOper},</if>
+            str_to_date(now(),'%Y-%m-%d %H:%i:%s'),
+            <if test=" tbl.gmtModified != null ">#{tbl.gmtModified},</if>
+            <if test=" tbl.fatherId != null ">#{tbl.fatherId},</if>
+        </trim>
+    </sql>
+
+    <insert id="insertAssertContent" parameterType="com.lc.bo.domain.DataAssetCategoryTbl">
+        insert into data_asset_category (<include refid="dataAssetCateKey"/>) values (<include
+            refid="dataAssetCateValue"/>)
+    </insert>
+
+    <delete id="deleteForList" parameterType="list">
+        <if test=" list != null and list.sie >0 ">
+            <foreach collection="list" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+    </delete>
+
+</mapper>

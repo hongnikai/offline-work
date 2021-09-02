@@ -18,5 +18,5 @@ public interface UserService {
 
     User findUserByUserId(String id);
 
-
+    List<Map<String,Object>> selectForUpdateSock();
 }

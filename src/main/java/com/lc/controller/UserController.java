@@ -44,19 +44,16 @@ public class UserController {
      */
     @RequestMapping("/news")
     public String news(Model model, HttpServletRequest req){
-
-
-
-
         MysqlPager mysqlPager = new MysqlPager();
-
-
-
 
     return "";
     }
-
-
-
+    /**
+     * 测试数据库悲观锁
+     */
+    @RequestMapping("/testSelectSock")
+    public void testSelectSock(){
+            userService.selectForUpdateSock();
+    }
 
 }

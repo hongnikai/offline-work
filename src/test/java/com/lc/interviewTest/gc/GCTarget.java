@@ -1,5 +1,8 @@
 package com.lc.interviewTest.gc;
 
+
+import org.junit.Test;
+
 public class GCTarget {
 
     // 对象的ID
@@ -12,9 +15,11 @@ public class GCTarget {
         this.id = id;
     }
 
+
     protected void finalize() throws Throwable {
         // 执行垃圾回收时打印显示对象ID
         System.out.println("Finalizing GCTarget, id is : " + id);
     }
+
 
 }

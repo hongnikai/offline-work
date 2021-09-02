@@ -24,4 +24,6 @@ public interface UserDao {
 
     List<User> pager(@Param("pageNo") int pageNo, @Param("pageSize")int pageSize);
 
+    List<Map<String,Object>> selectForUpdateSock();
+
 }

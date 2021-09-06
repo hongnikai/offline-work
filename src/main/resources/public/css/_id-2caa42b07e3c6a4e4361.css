@@ -1,0 +1,22 @@
+.product[data-v-41883265] .van-tabs__wrap {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1)
+}
+
+.product[data-v-41883265] .van-tabs__nav {
+    width: 230px;
+    margin: 0 auto
+}
+
+.product .bg-red[data-v-41883265] {
+    background: #e73556
+}
+
+.product .text-red[data-v-41883265] {
+    color: #e73556
+}
+
+.product .icongouxuan1[data-v-41883265] {
+    top: 1rem
+}

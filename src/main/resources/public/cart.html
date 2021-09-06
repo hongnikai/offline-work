@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>购物车(0) - Mitao国际 -</title>
+    <meta data-n-head="ssr" charset="utf-8">
+    <meta data-n-head="ssr" name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta data-n-head="ssr" data-hid="description" name="description" content="">
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link data-n-head="ssr" rel="stylesheet" href="./css/normalize.min.css">
+    <link data-n-head="ssr" rel="stylesheet" href="./css/font_2389987_y7igrkssai.css">
+    <link crossorigin="anonymous" rel="stylesheet"
+          href="./css/app-f08f52708208ca5ed442.css">
+</head>
+<body class="">
+<div id="__nuxt">
+    <div id="__layout">
+        <div class="flex flex-col justify-between min-h-screen text-gray-700">
+            <div class="relative flex-auto">
+                <div class="absolute inset-0 overflow-y-scroll mb-28 pb-32 element">
+                    <div class="list px-4 mt-3"></div>
+                    <div class="flex items-center my-48">
+                        <div class="flex-1 text-center"><img
+                                src="./img/cart7f13d911c698a44a598be0c5c6647ca2.svg">
+                            <div class="text-2xl py-4">
+                                购物车空空如也
+                            </div>
+                            <div class="text-2xl text-gray-600 pb-4">
+                                再不下手,就要被抢没啦~
+                            </div>
+                            <div class="text-2xl inline-block px-6 py-2  text-gray-600 border border-1 border-solid border-gray-500 nuxt-link-active" onclick="goto('product')">
+                                去逛逛
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 bg-white py-1 w-full z-50">
+                    <div class="flex w-full px-4 py-2">
+                        <div class="w-1/3 flex itmes-center relative">
+                            <div role="checkbox" tabindex="0" aria-checked="true" class="van-checkbox"
+                                 style="display: none;">
+                                <div class="van-checkbox__icon van-checkbox__icon--round van-checkbox__icon--checked"><i
+                                        class="van-icon van-icon-success"
+                                        style="border-color: rgb(237, 28, 36); background-color: rgb(237, 28, 36);">
+                                </i></div>
+                                <span class="van-checkbox__label">
+          全选
+        </span></div>
+                        </div>
+                        <div class="w-2/3 flex justify-end itmes-center">
+                            <div class="mr-2 text-center">
+                                <div class="font-bold">
+                                    合计: <span class="text-red-500 text-4xl">0</span></div>
+                                <div class="text-base pt-2 text-gray-500">
+                                    (不含运费)
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="absolute inset-0 z-50" style="display: none;"></div>
+                                <div class="text-white bg-red-500 px-12 py-3 rounded-full ">
+                                    结算(0)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-b2a7a9ce="" class="bottom_tab w-full flex justify-around z-50">
+                <div data-v-b2a7a9ce="" class="tab_item flex-1 h-full flex flex-col justify-center"
+                     onclick="goto('index')">
+                    <div data-v-b2a7a9ce="" class="h-12 w-12 mx-auto">
+                        <div data-v-b2a7a9ce="" class="iconfont-jp h-12 w-12 absolute iconshouye"></div>
+                    </div>
+                    <div data-v-b2a7a9ce="">首页</div>
+                </div>
+                <div data-v-b2a7a9ce="" class="tab_item flex-1 h-full flex flex-col justify-center on">
+                    <div data-v-b2a7a9ce="" class="h-12 w-12 mx-auto">
+                        <div data-v-b2a7a9ce="" class="iconfont-jp h-12 w-12 absolute icongouwuche"></div>
+                    </div>
+                    <div data-v-b2a7a9ce="">购物车</div>
+                </div>
+                <div data-v-b2a7a9ce="" class="tab_item flex-1 h-full flex flex-col justify-center"
+                     onclick="goto('my')">
+                    <div data-v-b2a7a9ce="" class="h-12 w-12 mx-auto">
+                        <div data-v-b2a7a9ce="" class="iconfont-jp h-12 w-12 absolute icongerenzhongxin"></div>
+                    </div>
+                    <div data-v-b2a7a9ce="">我的</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function goto(e) {
+        if (e == 'index') {
+            window.location.href = 'http://localhost:8082/index.html';
+        } else if (e == 'my') {
+            window.location.href = 'http://localhost:8082/my.html';
+        }else if(e=='product'){
+            window.location.href = 'http://localhost:8082/product.html';
+        }
+
+    }
+
+</script>

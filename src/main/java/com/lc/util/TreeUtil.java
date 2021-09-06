@@ -2,7 +2,7 @@ package com.lc.util;
 
 import com.google.common.collect.Lists;
 import com.lc.bo.domain.DataAssetCategoryResponse;
-import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.BeanUtils;
 

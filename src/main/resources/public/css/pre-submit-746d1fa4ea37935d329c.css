@@ -1,0 +1,99 @@
+.van-cell-group {
+    background-color: #fff
+}
+
+.van-cell-group__title {
+    padding: 16px 16px 8px;
+    color: #969799;
+    font-size: 14px;
+    line-height: 16px
+}
+
+.addressForm.van-popup[data-v-250a5241] {
+    width: 95%;
+    background: #fff;
+    border-radius: 5px
+}
+
+.addressForm .close[data-v-250a5241] {
+    padding: .1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.addressForm .close[data-v-250a5241] .van-icon {
+    font-size: 2rem
+}
+
+.addressForm .btn-box[data-v-250a5241] {
+    padding: .1rem
+}
+
+.address-list[data-v-08a0eb9d] .van-address-list__add {
+    z-index: 1;
+    background-color: #1989fa;
+    border: 1px solid #1989fa
+}
+
+.addressSelect[data-v-2c983c58] {
+    background-color: transparent
+}
+
+.addressSelect[data-v-2c983c58] .van-address-list {
+    width: 95vw;
+    border-radius: 5px;
+    padding-top: 5px;
+    background: #fff;
+    padding-bottom: 0;
+    overflow: hidden
+}
+
+.addressSelect[data-v-2c983c58] .van-address-list .van-address-list__add {
+    position: relative
+}
+
+.addressSelect[data-v-2c983c58] .van-address-list .van-radio-group {
+    max-height: 70vh;
+    overflow: scroll
+}
+
+.addressSelect .overlay[data-v-2c983c58] {
+    background: rgba(0, 0, 0, .7);
+    height: 100vh;
+    width: 100vw
+}
+
+.bindUserInfo .border[data-v-6a0564f2] {
+    border-style: solid;
+    border-width: 1px
+}
+
+.bindUserInfo .border-bottom[data-v-6a0564f2] {
+    border-bottom: 1px solid #ddd
+}
+
+.bindUserInfo .border-bottom[data-v-6a0564f2]:active, .bindUserInfo .border-bottom[data-v-6a0564f2]:focus, .bindUserInfo .border-bottom[data-v-6a0564f2]:hover {
+    border-bottom-color: #333
+}
+
+.bindUserInfo .border-left[data-v-6a0564f2] {
+    border-left-style: solid;
+    border-left-width: 1px
+}
+
+.pre-submit[data-v-666eb1b8] .van-cell__title.van-field__label {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none
+}
+
+.pre-submit .van-cell[data-v-666eb1b8] {
+    padding: 1rem
+}

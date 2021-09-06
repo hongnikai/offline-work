@@ -15,8 +15,8 @@ public class ArrayListTest {
        names.add("jack");
 
 
-        ArrayList arrayList = (ArrayList) names.subList(0,1);
-        System.out.println(arrayList);
+        names = names.subList(0,1);
+        System.out.println(names);
 
 
 

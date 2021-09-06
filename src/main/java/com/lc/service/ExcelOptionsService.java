@@ -32,7 +32,7 @@ public class ExcelOptionsService {
     public List<List<String>> writeWithoutHead(InputStream inputStream) {
         StringExcelListener listener = new StringExcelListener();
         ExcelReader excelReader = EasyExcelFactory.read(inputStream, null, listener).headRowNumber(0).build();
-        excelReader.read();
+        excelReader.readAll();
         List<List<String>> datas = listener.getDatas();
         excelReader.finish();
         return datas;

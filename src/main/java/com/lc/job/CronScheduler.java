@@ -24,4 +24,7 @@ public class CronScheduler {
         scheduler.start();
         scheduler.scheduleJob(jobDetail,cronTrigger);
     }
+
+
+
 }

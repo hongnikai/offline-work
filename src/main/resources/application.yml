@@ -3,18 +3,27 @@ server:
 
 spring:
   datasource:
+<<<<<<< HEAD
+    name: choujiang
+    url: jdbc:mysql://172.20.10.6:3306/choujiang?autoReconnect=true&failOverReadOnly=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+=======
     name: pis
     url: jdbc:mysql://114.116.154.251:3306/riskm?autoReconnect=true&failOverReadOnly=false&useUnicode=true&characterEncoding=utf-8
+>>>>>>> c1a2bf8ec2687eaa3cde211ae4046e155594d6a1
     username: root
     password: 123456
     #         使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
+<<<<<<< HEAD
+    driver-class-name: com.mysql.cj.jdbc.Driver
+=======
     driver-class-name: com.mysql.jdbc.Driver
 #  data:
 #    elasticsearch:
 #      cluster-nodes: 114.116.154.251:9200
 #      cluster-name: elasticsearch
 
+>>>>>>> c1a2bf8ec2687eaa3cde211ae4046e155594d6a1
 
 
 ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别

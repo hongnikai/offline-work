@@ -35,7 +35,9 @@ public class LogAspect {
     @Around("LogAspect()")
     public Object deAround(ProceedingJoinPoint joinPoint) throws Throwable{
         System.out.println("deAround");
-        return joinPoint.proceed();
+        joinPoint.proceed();
+        System.out.println("deAround");
+        return null;
     }
 
 }

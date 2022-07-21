@@ -43,5 +43,11 @@ public class UserServiceImpl implements UserService {
             return user;
         }
 
+        @Override
+        @Transactional
+        public List<Map<String, Object>> selectForUpdateSock() {
+           List<Map<String, Object>> user = userDao.selectForUpdateSock();
+            return user;
+        }
 
 }

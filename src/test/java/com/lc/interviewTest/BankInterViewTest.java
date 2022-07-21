@@ -76,7 +76,24 @@ public class BankInterViewTest extends Thread implements Runnable {
 
         Reference<? extends String> reference = referenceQueue.poll();
         System.out.println(reference); //null
-
-
     }
+
+    @Test
+    public void testKaoS(){
+        int x=8;
+        int y=-7;
+        int z=9;
+        if(x<y){
+            if(y<0){
+
+            }else{
+                z-=1;
+            }
+        }
+
+        System.out.println("%d\n");
+        System.out.println(z);
+    }
+
+
 }

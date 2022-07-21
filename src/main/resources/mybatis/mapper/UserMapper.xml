@@ -43,7 +43,9 @@
         select * from user limit (#{pageNo}-1)*#{pageSize},#{pageSize}
     </select>
 
-
+    <select id="selectForUpdateSock" resultType="map">
+      select * from MAG_OR_SUPPLY_DEPT where dept_code ='106060526401030012'
+    </select>
 
 
 

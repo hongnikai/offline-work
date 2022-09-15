@@ -23,6 +23,18 @@ public class Program {
     }
 //ctrl + n 构造方法 + getter & setter
 
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+
+       Integer a = new Integer(1);
+       Integer b = 1;
+       int c = 1;
+        System.out.println(a==b);
+        System.out.println(a==c);
+
+
+
+
+    }
 
 
 

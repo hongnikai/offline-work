@@ -23,40 +23,38 @@ public class UserController {
 
 
     @RequestMapping("/insertTeamData")
-    public Object insertTeamData()throws Exception{
+    public Object insertTeamData() throws Exception {
         List list = new ArrayList();
-        for(int i=0;i<2000;i++){
+        for (int i = 0; i < 2000; i++) {
             Map map = new HashMap();
-            map.put("id",i+" ");
-            map.put("name","第"+i+"个人");
+            map.put("id", i + " ");
+            map.put("name", "第" + i + "个人");
             list.add(map);
         }
         System.out.println(SizeofUtil.sizeof(list));
-            userService.insertUsers(list);
-            return list;
-        }
+        userService.insertUsers(list);
+        return list;
+    }
 
 
     /**
      * 返回新闻选项卡
+     *
      * @param model
      * @return
      */
     @RequestMapping("/news")
-    public String news(Model model, HttpServletRequest req){
+    public String news(Model model, HttpServletRequest req) {
         MysqlPager mysqlPager = new MysqlPager();
-<<<<<<< HEAD
-
-=======
->>>>>>> c1a2bf8ec2687eaa3cde211ae4046e155594d6a1
-    return "";
+        return "";
     }
+
     /**
      * 测试数据库悲观锁
      */
     @RequestMapping("/testSelectSock")
-    public void testSelectSock(){
-            userService.selectForUpdateSock();
+    public void testSelectSock() {
+        userService.selectForUpdateSock();
     }
 
 }

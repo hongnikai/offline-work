@@ -1,0 +1,18 @@
+数据处理状态查询接口 旧地址
+/api/data/status        GET
+数据处理状态查询接口 新地址
+/queryHobStatus/v1.1    GET
+
+文件同步服务（原 https 下载文件接口,旧接口路径/file/download已废弃）
+/syncDataFile/v1.1      GET
+
+数据加工类服务 新接口
+/dispatchTask/v1.0      POST
+
+任务完成确认服务 新接口
+/confirmJobStatus/v1.0  POST
+
+单表实时数据查询服务 旧地址
+/api/base/data/query    POST
+单表实时数据查询服务 新地址
+/queryData/v1.1         POST

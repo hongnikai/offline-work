@@ -49,26 +49,30 @@ public class CronTaskConfigurer implements SchedulingConfigurer {
         return Executors.newScheduledThreadPool(10,cronTaskExecutor);
     }
 
+    /**
+     * 实现类添加定时任务
+     */
     public void addCronTask(String workflowId, String cron, TreeSet treeSet){
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        };
+        CronTaskRunnable runnable = new CronTaskRunnable();//new 定时任务Runnable类
+        runnable.setTreeSet(treeSet);//设置传递属性
+        /* @Resource 依赖注入CronTaskConfigurer */
+        ScheduledTaskRegistrar scheduledTaskRegistrar = getScheduledTaskRegistrar();//获取ScheduledTaskRegistrar
         Trigger trigger = triggerContext -> {
-            if(true){
+            if(true){//定时任务回调方法 return null 为关闭定时任务
                 return null;
             }
             CronTrigger cronTrigger = new CronTrigger(cron);
             return cronTrigger.nextExecutionTime(triggerContext);
         };
         TriggerTask triggerTask = new TriggerTask(runnable,trigger);
-        ScheduledTask scheduledTask = scheduledTaskRegistrar.scheduleTriggerTask(triggerTask);
-        scheduledTaskRegistrar.addTriggerTask(triggerTask);
-        scheduledChannel.put(workflowId,scheduledTask);
+        ScheduledTask scheduledTask = this.scheduledTaskRegistrar.scheduleTriggerTask(triggerTask);
+        this.scheduledTaskRegistrar.addTriggerTask(triggerTask);
+        scheduledChannel.put(workflowId,scheduledTask);//将定时任务放入静态类map中 方便增删
     }
 
+    /**
+     * 删除定时任务
+     */
     public void deleteCronTask(String workflowId){
         ScheduledTask scheduledTask = scheduledChannel.get(workflowId);
         if(Objects.nonNull(scheduledTask)){

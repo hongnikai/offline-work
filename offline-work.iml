@@ -27,6 +27,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="aspose-cells-8.5.2" level="project" />
     <orderEntry type="library" name="spire.xls.free-3.9.1" level="project" />
+    <orderEntry type="library" name="commons-codec-1.10" level="project" />
+    <orderEntry type="library" name="jackson-all-1.9.11" level="project" />
+    <orderEntry type="library" name="guava-18.0" level="project" />
+    <orderEntry type="library" name="http-request-6.0" level="project" />
+    <orderEntry type="library" name="jboot-3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.5.RELEASE" level="project" />
@@ -41,7 +46,6 @@
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.1.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
@@ -62,7 +66,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.1.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.16" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.1.5.RELEASE" level="project" />
@@ -82,7 +85,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.1.7.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.1.7.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.6.2" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.5" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.11" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.22" level="project" />
     <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.1.1" level="project" />
@@ -198,5 +202,9 @@
     <orderEntry type="library" name="Maven: org.apache.pdfbox:pdfbox:2.0.12" level="project" />
     <orderEntry type="library" name="Maven: org.apache.pdfbox:fontbox:2.0.12" level="project" />
     <orderEntry type="library" name="Maven: e-iceblue:spire.xls:4.6.5" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-quartz:2.1.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.7.RELEASE" level="project" />
   </component>
 </module>
